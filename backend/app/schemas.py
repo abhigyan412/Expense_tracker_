@@ -1,5 +1,5 @@
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime, timezone
 
 from pydantic import BaseModel, ConfigDict, field_validator
 
@@ -61,6 +61,15 @@ class ExpenseResponse(BaseModel):
     category_id: int
     created_at: datetime
     category: CategoryResponse
+
+    @field_validator("created_at")
+    @classmethod
+    def mark_utc(cls, v: datetime) -> datetime:
+        # SQLite stores CURRENT_TIMESTAMP as naive UTC; attach the tzinfo
+        # explicitly so clients don't misinterpret it as local time.
+        if v.tzinfo is None:
+            v = v.replace(tzinfo=timezone.utc)
+        return v
 
 
 class SummaryResponse(BaseModel):

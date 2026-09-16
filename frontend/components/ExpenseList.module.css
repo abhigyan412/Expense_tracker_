@@ -16,7 +16,7 @@
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .amount {
@@ -40,7 +40,7 @@
   text-align: left;
   padding: var(--space-sm);
   color: var(--color-muted);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;

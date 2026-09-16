@@ -35,7 +35,7 @@ export default function CategorySection({ categories, loading, onCreate }) {
 
   return (
     <Card>
-      <h2 className={styles.title}>Categories</h2>
+      <h2 className={styles.title}>CATEGORIES</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
           <label className={styles.fieldLabel} htmlFor="category-name">

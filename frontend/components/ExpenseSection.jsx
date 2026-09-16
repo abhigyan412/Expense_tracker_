@@ -56,7 +56,7 @@ export default function ExpenseSection({ categories, onCreate }) {
 
   return (
     <Card>
-      <h2 className={styles.title}>Add Expense</h2>
+      <h2 className={styles.title}>ADD EXPENSE</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
           <label className={styles.fieldLabel} htmlFor="expense-title">

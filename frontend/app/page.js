@@ -50,7 +50,7 @@ export default function Home() {
         </div>
 
         <Card>
-          <h2 className={styles.panelTitle}>Recent Expenses</h2>
+          <h2 className={styles.panelTitle}>RECENT  EXPENSES</h2>
           <ExpenseList expenses={expenses.data} loading={expenses.loading} />
         </Card>
       </main>
