@@ -2,13 +2,14 @@
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
+  padding-right: 60px;
 }
 
 .form {
   display: flex;
   align-items: flex-end;
   gap: var(--space-sm);
-  margin: var(--space-md) 0;
+  margin: var(--space-xs) 0 var(--space-md);
 }
 
 .field {
